@@ -106,7 +106,7 @@ const chatbotSteps = (updateValues) => {
         },
         {
             id: '8',
-            message: 'Entendi! Para ajustarmos à sua agenda, me diga, quais dias da semana são ideais para você?',
+            message: 'Entendi! Para ajustarmos à sua agenda, me diga, qual dia da semana seria o ideal para você?',
             trigger: 'dayOfWeek'
         },
         {

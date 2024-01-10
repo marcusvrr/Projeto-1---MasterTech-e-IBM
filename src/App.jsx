@@ -1,6 +1,7 @@
 import ChatBot from 'react-simple-chatbot'
 import chatbotSteps from './chatbotSteps'
 import chatbot from './assets/chatbot.png'
+import user from './assets/user.png'
 import { useEffect, useState } from 'react'
 import Swal from 'sweetalert2';
 
@@ -34,6 +35,7 @@ function App() {
             <ChatBot
                 botAvatar={chatbot}
                 steps={steps}
+                userAvatar={user}
             />
         </>
     )
