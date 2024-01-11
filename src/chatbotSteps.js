@@ -8,8 +8,9 @@ const chatbotSteps = (updateValues) => {
         {
             id: '2',
             options: [
-                { value: 1, label: '1. Marcar uma consulta psicológica', trigger: '3' },
-                { value: 2, label: '2. Desmarcar uma consulta psicológica', trigger: 'uncheckAppointment' }
+                { value: 1, label: 'Marcar uma consulta psicológica', trigger: '5' },
+                { value: 2, label: 'Desmarcar uma consulta psicológica', trigger: 'uncheckAppointment' },
+                { value: 3, label: 'Tenho outra dúvida', trigger: 'information' }
             ]
         },
         {
@@ -17,18 +18,6 @@ const chatbotSteps = (updateValues) => {
             message: 'Para desmarcar a consulta, precisamos garantir que estamos atualizados. Poderia informar seu nome completo, por favor?',
             trigger: 'nameUncheckAppointment'
 
-        },
-        {
-            id: '3',
-            message: 'Você está buscando agendar uma consulta psicológica ou tem outra dúvida?',
-            trigger: '4',
-        },
-        {
-            id: '4',
-            options: [
-                { value: 1, label: '1. Sim, quero marcar uma consulta psicológica', trigger: '5' },
-                { value: 2, label: '2. Não, tenho outra dúvida', trigger: 'information' }
-            ],
         },
         {
             id: '5',
@@ -53,27 +42,27 @@ const chatbotSteps = (updateValues) => {
         },
         {
             id: 'information',
-            message: 'Legal! Se você tiver outras dúvidas ou quiser saber mais sobre a abordagem fenomenológica existencial, estou à disposição. Essa abordagem foca na compreensão profunda da sua experiência única. Quer saber mais, marcar uma consulta ou voltar ao menu inicial?',
+            message: 'Legal! Se você quiser saber mais sobre a abordagem fenomenológica existencial, estou à disposição. Quer saber mais, marcar uma consulta ou voltar ao menu inicial?',
             trigger: 'informationOptions'
         },
         {
             id: 'informationOptions',
             options: [
-                { value: 1, label: '1. Marcar consulta', trigger: '5' },
-                { value: 2, label: '2. Saber mais', trigger: 'about' },
-                { value: 3, label: '3. Voltar ao menu inicial', trigger: '1' }
+                { value: 2, label: 'Saber mais', trigger: 'about' },
+                { value: 1, label: 'Marcar consulta', trigger: '5' },
+                { value: 3, label: 'Voltar ao menu inicial', trigger: '1' }
             ]
         },
         {
             id: 'about',
-            message: 'Ficarei feliz em fornecer informações sobre o atendimento psicológico com a abordagem fenomenológica existencial. Essa abordagem foca na compreensão profunda da experiência humana, considerando o significado subjetivo da vivência de cada indivíduo. A terapia fenomenológica existencial busca explorar questões fundamentais, como liberdade, responsabilidade, e a busca por sentido na vida. Seu objetivo é compreender as perspectivas únicas de cada pessoa, promovendo um ambiente de reflexão e autoconhecimento. Se essa abordagem ressoa com você, ficarei feliz em agendar uma consulta para explorarmos mais profundamente as suas experiências. 😊',
+            message: 'Essa abordagem visa compreender profundamente a experiência humana, explorando questões como liberdade, responsabilidade e busca por sentido na vida. Se isso ressoar com você, ficarei feliz em agendar uma consulta para explorarmos suas experiências. 😊',
             trigger: 'aboutOptions'
         },
         {
             id: 'aboutOptions',
             options: [
-                { value: 1, label: '1. Marcar consulta', trigger: '5' },
-                { value: 2, label: '2. Voltar ao menu inicial', trigger: 1 }
+                { value: 1, label: 'Marcar consulta', trigger: '5' },
+                { value: 2, label: 'Voltar ao menu inicial', trigger: 1 }
             ]
         },
         {
@@ -85,19 +74,19 @@ const chatbotSteps = (updateValues) => {
             id: 'timeOfDay',
             options: [
                 {
-                    value: 1, label: '1. Manhã', trigger: () => {
+                    value: 1, label: 'Manhã', trigger: () => {
                         updateValues.setTimeOfDay('manhã');
                         return '8';
                     }
                 },
                 {
-                    value: 2, label: '2. Tarde', trigger: () => {
+                    value: 2, label: 'Tarde', trigger: () => {
                         updateValues.setTimeOfDay('tarde');
                         return '8';
                     }
                 },
                 {
-                    value: 3, label: '3. Noite', trigger: () => {
+                    value: 3, label: 'Noite', trigger: () => {
                         updateValues.setTimeOfDay('noite');
                         return '8';
                     }
@@ -113,19 +102,19 @@ const chatbotSteps = (updateValues) => {
             id: 'dayOfWeek',
             options: [
                 {
-                    value: 1, label: '1. Segunda-feira', trigger: () => {
+                    value: 1, label: 'Segunda-feira', trigger: () => {
                         updateValues.setDayOfWeek('segunda-feira');
                         return 'end'
                     }
                 },
                 {
-                    value: 2, label: '2. Quarta-feira', trigger: () => {
+                    value: 2, label: 'Quarta-feira', trigger: () => {
                         updateValues.setDayOfWeek('quarta-feira');
                         return 'end'
                     }
                 },
                 {
-                    value: 3, label: '3. Sexta-feira', trigger: () => {
+                    value: 3, label: 'Sexta-feira', trigger: () => {
                         updateValues.setDayOfWeek('sexta-feira');
                         return 'end'
                     }
