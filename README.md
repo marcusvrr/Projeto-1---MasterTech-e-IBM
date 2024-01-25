@@ -12,7 +12,7 @@ Este projeto representa a conclusão da Trilha "Fundamentos de Tecnologia e Aten
 
 **Personalização da Identidade Visual:** O chatbot possui uma identidade visual personalizada para proporcionar uma experiência de marca consistente.
 
-**Demonstração Funcional:** Uma demonstração funcional do chatbot está disponível [aqui](https://chatbot-mastertech-ibm.surge.sh/).
+**Demonstração Funcional:** Uma demonstração funcional do chatbot está disponível [aqui](https://jolly-alpaca-356c20.netlify.app/).
 
 ### Implementação
 O chatbot foi desenvolvido usando React (com Vite) e a biblioteca React Simple Chatbot. O código está estruturado em etapas para facilitar a compreensão e manutenção.
