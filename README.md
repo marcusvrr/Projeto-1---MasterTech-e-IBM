@@ -14,6 +14,11 @@ Este projeto representa a conclusão da Trilha "Fundamentos de Tecnologia e Aten
 
 **Demonstração Funcional:** Uma demonstração funcional do chatbot está disponível [aqui](https://jolly-alpaca-356c20.netlify.app/).
 
+**Demonstração em vídeo:**
+
+https://github.com/marcusvrr/Projeto-1-MasterTech-e-IBM/assets/91297313/81a563b6-5b71-4d9a-ab6e-e3fddc1391f6
+
+
 ### Implementação
 O chatbot foi desenvolvido usando React (com Vite) e a biblioteca React Simple Chatbot. O código está estruturado em etapas para facilitar a compreensão e manutenção.
 
